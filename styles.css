@@ -3,10 +3,10 @@
 }
 
 :root {
+  --web-margin: 0 32px;
   --background-color: #f3f3f3;
   --black: #111111; 
   --border: 1.5px solid #111111;
-  --border-radius: 20px; 
 }
 
 html {
@@ -23,8 +23,8 @@ body {
 h2 {
   margin: 0;
 
-  font-size: 64px;
-  font-weight: 600;
+  font-size: 72px;
+  font-weight: 400;
   line-height: 1.1;
   color: var(--black);
 }
@@ -93,13 +93,13 @@ img {
 
 /*---------------- HOMEPAGE ----------------*/
 
-/*---------------- hero ----------------*/
+/*---------------- welcome ----------------*/
 .welcome-section {
-  height: 88vh;
+  height: 80vh;
 }
 
 .welcome-text {
-  margin: 0 32px;
+  margin: var(--web-margin);
   padding: 60px 0 40px 0;
 }
 
@@ -123,10 +123,10 @@ text {
   fill: var(--black);
 }
 
-/*---------------- selected works ----------------*/
+/*---------------- works ----------------*/
 .works-section {
-  margin: 0 32px;
-  padding-bottom: 100px;
+  margin: var(--web-margin);
+  padding: 70px 0 100px 0;
 }
 
 .work-text {
@@ -145,7 +145,10 @@ text {
 .cards-container {
   padding-top: 60px;
 
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 24px;
+  row-gap: 60px;
 }
 
 .card-box {
@@ -156,19 +159,48 @@ text {
   margin-right: 0;
 }
 
-.card-content > img {
-  border-radius: var(--border-radius);
-}
-
-.card-content > img:hover {
-  border: var(--border);
-}
-
 .category {
   font-weight: 400;
   font-size: 18px;
   text-transform: none;
   border-bottom: var(--border);
+}
+
+/*---------------- about ----------------*/
+.contacts-section {
+  margin: var(--web-margin);
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 24px;
+}
+
+.content-grid > img {
+  border: var(--border);
+}
+
+.about-text > p {
+  padding-bottom: 20px;
+}
+
+.about-title {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.contacts-link {
+  text-transform: none;
+  font-weight: 400;
+  font-size: 72px;
 }
 
 /*---------------- footer ----------------*/
