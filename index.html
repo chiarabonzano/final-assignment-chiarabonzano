@@ -14,6 +14,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="js/gsap.js"></script>
+  <script src="js/ScrollTrigger.js"></script>
 </head>
 <body>
   <header class="header-wrapper">
@@ -26,15 +28,23 @@
       </ul>
     </nav>
   </header>
-  <main class="main-wrapper homepage">
-    <section class="welcome-section">
-      <h2>Hello! I'm Chiara Elena Bonzano,</h2>
-      <h2>but all my friends call me CEB.</h2>
-      <div class="location-text">
-        <h2>Currently based in Milan,</h2>
-        <h2> I work as a digital designer.</h2>
-      </div>
-    </section>
+  <main class="main-wrapper">
+    <div class="homepage-hero">
+      <section class="welcome-section">
+        <h2>Hello! I'm Chiara Elena Bonzano,</h2>
+        <h2>digital and web designer.</h2>
+      </section>
+      <div class="text-animation">
+        <svg width="1922" height="828" viewBox="0 0 1922 828" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path id="path-1" fill="none" d="M1 644.264C139.688 424.145 432.302 64.0695 661.358 14.4415C890.384 -35.1798 1016.72 56.5419 966.726 224.383C913.286 403.787 659.211 587.008 745.334 732.057C817.859 854.205 1004.9 865.232 1172.85 720.606C1310.26 602.276 1417.14 338.896 1642.35 403.787C1786.83 445.415 1795.04 712.972 1921 827.485" stroke="black"/>
+          <text>
+            <textPath class="text-path" xlink:href="#path-1">
+              *Currently based in Milan.
+            </textPath>
+          </text>
+         </svg>
+        </div>
+    </div>
     <section class="selected-works-section">
       <div class="selection-text">
         <p>Here a selection of my works</p>
@@ -77,3 +87,15 @@
   </footer>
 </body>
 </html>
+<script>
+  gsap.set("svg", {autoAlpha:1})
+
+  gsap.timeline({repeat:-1})
+  .from(".text-path", {
+  attr: { startOffset: "110%" },
+  duration: 5, ease: "none",
+  stagger:5
+})
+  .to(".text-path", {autoAlpha:0, duration: 0.5, stagger:5},5)
+
+</script>
