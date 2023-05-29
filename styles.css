@@ -16,8 +16,11 @@ html {
 body {
   margin: 0;
 
-  background-color: var(--background-color);
   font-family: 'Inter', sans-serif;
+}
+
+.main-wrapper {
+  background-color: var(--background-color);
 }
 
 h2 {
@@ -70,9 +73,6 @@ img {
   align-items: center;
   position: sticky;
   top: 0;
-
-  background-color: var(--background-color);
-  /* box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.15); */
 }
 
 .nav-list {
@@ -188,19 +188,22 @@ text {
 
 .about-text > p {
   padding-bottom: 20px;
+
+  color: var(--background-color);
 }
 
 .about-title {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
   text-transform: uppercase;
-  color: var(--black);
+  color: var(--background-color);
 }
 
 .contacts-link {
   text-transform: none;
   font-weight: 400;
   font-size: 72px;
+  color: var(--background-color);
 }
 
 /*---------------- footer ----------------*/
@@ -215,4 +218,5 @@ text {
 
   text-align: center;
   font-size: 12px;
+  color: var(--background-color);
 }
