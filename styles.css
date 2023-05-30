@@ -157,14 +157,6 @@ text {
   row-gap: 60px;
 }
 
-.card-box {
-  margin-right: var(--column-gap);
-}
-
-.card-box:last-child {
-  margin-right: 0;
-}
-
 .category {
   font-weight: 400;
   font-size: 18px;
@@ -325,4 +317,76 @@ text {
 
 .copyright.project-footer > p {
   color: var(--black);
+}
+
+/*---------------- MEDIA QUERY ----------------*/
+/*---------------- tablet viewport ----------------*/
+@media (max-width: 1024px) {
+  h2 {
+    font-size: 56px;
+  }
+
+  .contacts-link {
+    font-size: 56px;
+  }
+}
+
+/*---------------- mobile viewport ----------------*/
+@media (max-width: 480px) {
+  h2 {
+    font-size: 40px;
+  }
+
+  .nav-container {
+    display: none;
+  }
+
+  .welcome-text > h2 {
+    padding-right: 0;
+  }
+
+  text {
+    font-size: 100px;
+  }
+
+  .works-section {
+    padding: 40px 0;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .content-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contacts-text {
+    padding-top: 40px;
+  }
+
+  .contacts-link {
+    font-size: 40px;
+  }
+
+  .intro-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .intro-content {
+    padding-top: 20px;
+  }
+
+  .project-grid {
+    padding-bottom: 80px;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  video {
+    padding: 50px 0;
+  }
 }
