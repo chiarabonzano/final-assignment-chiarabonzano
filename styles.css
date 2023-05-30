@@ -63,6 +63,11 @@ img {
   height: auto;
 }
 
+video {
+  width: 100%;
+  height: auto;
+}
+
 /*---------------- header ----------------*/
 .header-wrapper {
   padding: 16px 32px;
@@ -135,7 +140,7 @@ text {
 }
 
 .work-text > p {
-  background-image: url(img/arrow-down.svg);
+  background-image: url(img/icons/arrow-down.svg);
   background-repeat: no-repeat;
   background-position: bottom 4px right;
   background-size: 12px auto;
@@ -220,3 +225,5 @@ text {
   font-size: 12px;
   color: var(--background-color);
 }
+
+/*---------------- PROJECT PAGE ----------------*/
