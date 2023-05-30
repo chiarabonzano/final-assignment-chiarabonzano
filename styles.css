@@ -214,6 +214,8 @@ text {
 
 /*---------------- footer ----------------*/
 .footer-wrapper {
+  margin: var(--web-margin);
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -228,14 +230,14 @@ text {
 }
 
 /*---------------- PROJECT PAGE ----------------*/
-
+/*---------------- intro ----------------*/
 .project-wrapper {
   margin: var(--web-margin);
 }
 
 .project-intro {
   height: 100vh;
-  padding-top: 80px;
+  padding-top: 40px;
 }
 
 .intro-container {
@@ -246,6 +248,18 @@ text {
   column-gap: var(--column-gap);
 }
 
+.intro-content > p > a {
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: none;
+  border-bottom: var(--border);
+}
+
+.intro-content > p {
+  padding-bottom: 20px;
+}
+
+/*---------------- project grid ----------------*/
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -274,4 +288,35 @@ text {
 .grid-element:last-child {
   grid-area: three;
   grid-row: 3/5;
+}
+
+/*---------------- project-footer ----------------*/
+.buttons-section {
+  width: 100%;
+  padding: 40px 0 80px 0;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrow-button {
+  padding: 5px 0;
+  background-repeat: no-repeat;
+  background-size: 30px auto;
+}
+
+.next {
+  background-image: url(img/icons/arrow-right.svg);
+  background-position: bottom 0px right;
+  padding-right: 40px;
+}
+
+.previous {
+  background-image: url(img/icons/arrow-left.svg);
+  background-position: bottom 0px left;
+  padding-left: 40px;
+}
+
+.copyright.project-footer > p {
+  color: var(--black);
 }
