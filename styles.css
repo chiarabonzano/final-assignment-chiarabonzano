@@ -7,6 +7,7 @@
   --background-color: #f3f3f3;
   --black: #111111; 
   --border: 1.5px solid #111111;
+  --column-gap: 24px;
 }
 
 html {
@@ -151,13 +152,13 @@ text {
   padding-top: 60px;
 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: var(--column-gap);
   row-gap: 60px;
 }
 
 .card-box {
-  margin-right: 24px;
+  margin-right: var(--column-gap);
 }
 
 .card-box:last-child {
@@ -184,7 +185,7 @@ text {
 .content-grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  column-gap: 24px;
+  column-gap: var(--column-gap);
 }
 
 .content-grid > img {
@@ -227,3 +228,50 @@ text {
 }
 
 /*---------------- PROJECT PAGE ----------------*/
+
+.project-wrapper {
+  margin: var(--web-margin);
+}
+
+.project-intro {
+  height: 100vh;
+  padding-top: 80px;
+}
+
+.intro-container {
+  padding-top: 40px;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: var(--column-gap);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: var(--column-gap);
+  grid-template-rows: 1fr 1fr 1fr 1fr 0.5fr;
+  grid-template-areas: "one . ." ". . two" ". three .";
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.grid-element {
+  padding-top: 80px;
+}
+
+.grid-element:first-child {
+  padding-top: 0;
+
+  grid-area: one;
+  grid-row: 1/3;
+}
+
+.grid-element:nth-child(2) {
+  grid-area: two;
+  grid-row: 2/4;
+}
+
+.grid-element:last-child {
+  grid-area: three;
+  grid-row: 3/5;
+}
