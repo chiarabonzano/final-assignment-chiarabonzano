@@ -212,6 +212,12 @@ text {
   color: var(--background-color);
 }
 
+.contacts-link:hover {
+  text-decoration: underline;
+  color: lightgreen;
+  transition: 350ms linear;
+}
+
 /*---------------- footer ----------------*/
 .footer-wrapper {
   margin: var(--web-margin);
@@ -300,20 +306,20 @@ text {
 }
 
 .arrow-button {
-  padding: 5px 0;
+  padding: 6px 0;
   background-repeat: no-repeat;
   background-size: 30px auto;
 }
 
 .next {
   background-image: url(img/icons/arrow-right.svg);
-  background-position: bottom 0px right;
+  background-position: bottom 1px right;
   padding-right: 40px;
 }
 
 .previous {
   background-image: url(img/icons/arrow-left.svg);
-  background-position: bottom 0px left;
+  background-position: bottom 1px left;
   padding-left: 40px;
 }
 
