@@ -288,6 +288,16 @@ text {
   grid-row: 3/5;
 }
 
+/*---------------- project media ----------------*/
+.project-gallery {
+  padding: 80px 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+  row-gap: 80px;
+}
+
 /*---------------- project-footer ----------------*/
 .buttons-section {
   width: 100%;
@@ -334,7 +344,7 @@ text {
 /*---------------- mobile viewport ----------------*/
 @media (max-width: 480px) {
   h2 {
-    font-size: 40px;
+    font-size: 32px;
   }
 
   .nav-container {
@@ -370,16 +380,30 @@ text {
     font-size: 40px;
   }
 
+  .project-wrapper {
+    margin: 0;
+  }
+
+  .project-intro {
+    height: auto;
+  }
+
+  .project-intro > h2 {
+    margin: 0 20px;
+  }
+
   .intro-container {
     display: flex;
     flex-direction: column;
   }
 
   .intro-content {
+    margin: 0 20px;
     padding-top: 20px;
   }
 
   .project-grid {
+    margin: 0 20px;
     padding-bottom: 80px;
 
     display: flex;
