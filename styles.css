@@ -218,7 +218,6 @@ text {
 
 .contacts-link:hover {
   text-decoration: underline;
-  color: lightgreen;
   transition: 350ms linear;
 }
 
