@@ -49,7 +49,7 @@
       <div class="cards-container">
         <article class="card-box">
           <a href="project-etro.html"><div class="card-content">
-            <img src="img/projects cover/etro-desktop-ui-cover.png" alt="MacBook displaing my design of the product page of Etro for South Korean and Japanese users" width="595" height="397">
+            <img src="img/projects-cover/etro-desktop-ui-cover.png" alt="MacBook displaing my design of the product page of Etro for South Korean and Japanese users" width="595" height="397">
             <h3>Etro Website</h3>
           </div></a>
           <div class="categories-box">
@@ -58,7 +58,7 @@
         </article>
         <article class="card-box">
           <a href="project-rayban.html"><div class="card-content">
-            <img src="img/projects cover/rayban-mobile-ui-cover.png" alt="Phone displaing the homepage of the mobile version of Ray-Ban Stories website" width="595" height="397">
+            <img src="img/projects-cover/rayban-mobile-ui-cover.png" alt="Phone displaing the homepage of the mobile version of Ray-Ban Stories website" width="595" height="397">
           <h3>Rayban Stories</h3>
           </div></a>
           <div class="categories-box">
@@ -67,7 +67,7 @@
         </article>
         <article class="card-box">
           <a href="project-alessi.html"><div class="card-content">
-            <img src="img/projects cover/alessi-poster-cover.png" alt="1 of the 3 interactive poster design series for Alessi's coffemakers, part of the ADI Design Museum Compasso d'Oro in Milan" width="595" height="397">
+            <img src="img/projects-cover/alessi-poster-cover.png" alt="1 of the 3 interactive poster design series for Alessi's coffemakers, part of the ADI Design Museum Compasso d'Oro in Milan" width="595" height="397">
             <h3>Alessi Interactive Poster Series</h3>
           </div></a>
           <div class="categories-box">
@@ -76,7 +76,7 @@
         </article>
         <article class="card-box">
           <a href="project-cosy.html"><div class="card-content">
-            <img src="img/projects cover/cosy-mobile-ui-cover.png" alt="Phone displaing the homepage of the mobile version of Cosy - The Sustainable Cosmetic Directory website" width="595" height="397">
+            <img src="img/projects-cover/cosy-mobile-ui-cover.png" alt="Phone displaing the homepage of the mobile version of Cosy - The Sustainable Cosmetic Directory website" width="595" height="397">
             <h3>COSY The Sustainable Cosmetic Directory</h3>
           </div></a>
           <div class="categories-box">
@@ -85,7 +85,7 @@
         </article>
         <article class="card-box">
           <a href="project-maka.html"><div class="card-content">
-            <img src="img/projects cover/maka-desktop-ui-cover.png" alt="MacBook displaing my design of the Maka Observatory homepage" width="595" height="397">
+            <img src="img/projects-cover/maka-desktop-ui-cover.png" alt="MacBook displaing my design of the Maka Observatory homepage" width="595" height="397">
           <h3>Maka Observatory Website</h3>
           </div></a>
           <div class="categories-box">
@@ -94,7 +94,7 @@
         </article>
         <article class="card-box">
           <a href="project-personal.html"><div class="card-content">
-            <img src="img/projects cover/personal-branding-business-card.png" alt="Back of a business card design for my personal branding" width="595" height="397">
+            <img src="img/projects-cover/personal-branding-business-card.png" alt="Back of a business card design for my personal branding" width="595" height="397">
             <h3>Personal branding</h3>
           </div></a>
           <div class="categories-box">
@@ -110,11 +110,12 @@
           <p>I create seamless user experiences and visually appealing interfaces through thoughtful design and efficient development.</p>
           <p>My work includes intuitive user flows, pixel-perfect layouts, and interactive prototypes that blend creativity with functionality. Visit my portfolio and contact me for collaborations or inquiries.</p>
         </div>
-      <div class="contacts-text">
-        <p class="about-title">Contacts</p>
-        <a class="contacts-link" href="mailto:hello@ciaoceb.com">hello@ciaoceb.com</a>
-        <a class="contacts-link" href="tel:+393351613860">(+39)3351613860</a>
-    </div>
+        <div class="contacts-text">
+          <p class="about-title">Contacts</p>
+          <a class="contacts-link" href="mailto:hello@ciaoceb.com">hello@ciaoceb.com</a>
+          <a class="contacts-link" href="tel:+393351613860">(+39)3351613860</a>
+        </div>
+      </div>
     </section>
     <footer class="footer-wrapper">
       <div class="copyright">
@@ -122,30 +123,30 @@
       </div>
     </footer>
   </div>
+  <script>
+    gsap.timeline({repeat:-1})
+    .from(".text-path", {
+      attr: { startOffset: "100%" },
+      duration: 4,
+      ease: "none",
+      stagger: 5})
+    .to(".text-path", {
+      attr: { startOffset: "-100%" },
+      duration: 4, 
+      ease: "none",
+      stagger: 5
+      });
+  </script>
+  <script>
+    gsap.to(".main-wrapper", {backgroundColor: "#111111", duration:2,
+      scrollTrigger: {
+        trigger: ".contacts-section",
+        // markers: true,
+        start: 1050,
+        end: 1600,
+        scrub: true
+      }
+    });
+  </script>
 </body>
 </html>
-<script>
-  gsap.timeline({repeat:-1})
-  .from(".text-path", {
-    attr: { startOffset: "100%" },
-    duration: 4,
-    ease: "none",
-    stagger: 5})
-  .to(".text-path", {
-    attr: { startOffset: "-100%" },
-    duration: 4, 
-    ease: "none",
-    stagger: 5
-    });
-</script>
-<script>
-  gsap.to(".main-wrapper", {backgroundColor: "#111111", duration:2,
-    scrollTrigger: {
-      trigger: ".contacts-section",
-      // markers: true,
-      start: 1050,
-      end: 1600,
-      scrub: true
-    }
-  });
-</script>
