@@ -157,6 +157,18 @@ text {
   row-gap: 60px;
 }
 
+.card-content > img {
+  -webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.card-content > img:hover {
+  -webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+
 .category {
   font-weight: 400;
   font-size: 18px;
