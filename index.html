@@ -37,7 +37,7 @@
       </section>
       <div class="text-animation">
         <svg width="1921" height="271" viewBox="0 0 1921 271" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path class="svg-path-hide" d="M0.5 0.5C227.29 26.2596 285.741 252.007 560.227 252.007C852.015 252.007 930.105 0.5 1177.94 0.5C1425.77 0.5 1574.47 270.5 1920.5 270.5" stroke="black"/>
+          <path class="svg-path-hide" id="path-1" d="M0.5 0.5C227.29 26.2596 285.741 252.007 560.227 252.007C852.015 252.007 930.105 0.5 1177.94 0.5C1425.77 0.5 1574.47 270.5 1920.5 270.5" stroke="black"/>
           <text>
             <textPath class="text-path" xlink:href="#path-1">*Currently living & working in Milan.</textPath>
           </text>
@@ -131,13 +131,14 @@
       attr: { startOffset: "100%" },
       duration: 4,
       ease: "none",
-      stagger: 5})
+      stagger: 5
+    })
     .to(".text-path", {
       attr: { startOffset: "-100%" },
       duration: 4, 
       ease: "none",
       stagger: 5
-      });
+    });
 
     gsap.to(".main-wrapper", {backgroundColor: "#111111", duration:2,
       scrollTrigger: {
