@@ -21,7 +21,7 @@ The website is developed using modern web technologies and frameworks, including
 - JavaScript
 
 ## Repository Commits
-You can track the progress and development of the website by visiting the [GitHub repository](https://github.com/spd-master-web/final-assignment-chiarabonzano/commits/main). The commit history provides a timeline of the changes and updates made to the website, showcasing the iterative development process.
+You can track the progress and development of the website by visiting the [GitHub repository](https://github.com/chiarabonzano/final-assignment-chiarabonzano/commits/main). The commit history provides a timeline of the changes and updates made to the website, showcasing the iterative development process.
 
 ## Usage and Installation
 To access and use the website, simply visit [www.ciaoceb.com](https://www.ciaoceb.com) in your preferred web browser. No installation is required.
