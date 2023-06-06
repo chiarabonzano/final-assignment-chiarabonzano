@@ -21,6 +21,8 @@ body {
 }
 
 .main-wrapper {
+  max-width: 1900px;
+
   background-color: var(--background-color);
 }
 
@@ -79,6 +81,7 @@ video {
   align-items: center;
   position: sticky;
   top: 0;
+  z-index: 2;
 }
 
 .nav-list {
@@ -100,10 +103,6 @@ video {
 /*---------------- HOMEPAGE ----------------*/
 
 /*---------------- welcome ----------------*/
-.welcome-section {
-  height: 80vh;
-}
-
 .welcome-text {
   margin: var(--web-margin);
   padding: 60px 0 40px 0;
@@ -119,7 +118,7 @@ svg {
   overflow: visible;
 }
 
-svg > path {
+.svg-path-hide {
   visibility: hidden;
 }
 
@@ -149,7 +148,7 @@ text {
 }
 
 .cards-container {
-  padding-top: 60px;
+  padding-top: 40px;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -169,10 +168,19 @@ text {
 	filter: grayscale(0);
 }
 
-.category {
+.categories-box {
+  display: flex;
+}
+
+.categories-box > p {
+  width: fit-content;
+
   font-weight: 400;
   font-size: 18px;
   text-transform: none;
+}
+
+.categories-box > p > span {
   border-bottom: var(--border);
 }
 
@@ -245,7 +253,6 @@ text {
 }
 
 .project-intro {
-  height: 100vh;
   padding-top: 40px;
 }
 
@@ -270,6 +277,8 @@ text {
 
 /*---------------- project grid ----------------*/
 .project-grid {
+  padding-top: 80px;
+  
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: var(--column-gap);
@@ -325,15 +334,19 @@ text {
 }
 
 .next {
-  background-image: url(img/icons/arrow-right.svg);
-  background-position: bottom 1px right;
+  height: 40px;
   padding-right: 40px;
+
+  background-image: url(img/icons/arrow-right.svg);
+  background-position: bottom 10px right;
 }
 
 .previous {
-  background-image: url(img/icons/arrow-left.svg);
-  background-position: bottom 1px left;
+  height: 40px;
   padding-left: 40px;
+
+  background-image: url(img/icons/arrow-left.svg);
+  background-position: bottom 10px left;
 }
 
 .copyright.project-footer > p {
@@ -451,5 +464,9 @@ text {
 
   video {
     padding: 50px 0;
+  }
+
+  .arrow-button span {
+    display: none;
   }
 }
