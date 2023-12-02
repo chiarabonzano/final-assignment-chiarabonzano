@@ -17,7 +17,19 @@ html {
 body {
   margin: 0;
 
-  font-family: 'Inter', sans-serif;
+  font-family: 'TWKLausanne-300', sans-serif;
+}
+
+@font-face {
+  font-family: 'TWKLausanne-300';
+    src: url('fonts/TWKLausanne-300.eot'); /* IE9 Compat Modes */
+    src: url('fonts/TWKLausanne-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('fonts/TWKLausanne-300.woff2') format('woff2'), /* Super Modern Browsers */
+        url('fonts/TWKLausanne-300.woff') format('woff'), /* Pretty Modern Browsers */
+        url('fonts/TWKLausanne-300.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('fonts/TWKLausanne-300.svg') format('svg'); /* Legacy iOS */
+    font-weight: 300;
+    font-style: normal;
 }
 
 .main-wrapper {
@@ -30,7 +42,7 @@ h2 {
   margin: 0;
 
   font-size: 72px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.1;
   color: var(--black);
 }
@@ -39,25 +51,24 @@ h3 {
   margin: 0;
   padding: 8px 0;
 
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 30px;
+  font-weight: 300;
   color: var(--black);
 }
 
 p {
   margin: 0;
 
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 300;
   color: var(--black);
 }
 
 
 a {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 300;
   text-decoration: none;
-  text-transform: uppercase;
   color: var(--black);
 }
 
@@ -100,6 +111,10 @@ video {
   padding-right: 0;
 }
 
+.nav-item a {
+  font-size: 30px;
+}
+
 /*---------------- HOMEPAGE ----------------*/
 
 /*---------------- welcome ----------------*/
@@ -124,7 +139,7 @@ svg {
 
 text {
   font-size: 64px;
-  font-weight: 400;
+  font-weight: 300;
   fill: var(--black);
 }
 
@@ -175,8 +190,8 @@ text {
 .categories-box > p {
   width: fit-content;
 
-  font-weight: 400;
-  font-size: 18px;
+  font-weight: 300;
+  font-size: 20px;
   text-transform: none;
 }
 
@@ -211,15 +226,14 @@ text {
 }
 
 .about-title {
-  font-size: 16px;
-  font-weight: 400;
-  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 300;
   color: var(--background-color);
 }
 
 .contacts-link {
   text-transform: none;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 72px;
   color: var(--background-color);
 }
@@ -265,8 +279,8 @@ text {
 }
 
 .intro-content > p > a {
-  font-weight: 400;
-  font-size: 18px;
+  font-weight: 300;
+  font-size: 20px;
   text-transform: none;
   border-bottom: var(--border);
 }
