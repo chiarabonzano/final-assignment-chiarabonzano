@@ -1,3 +1,21 @@
+/* :root { 
+  background-color: #fefefe;
+  filter: invert(100%);
+}
+
+* { 
+  background-color: inherit;
+}
+
+img:not([src*=".svg"]), video {  
+  filter: invert(100%);
+} 
+
+.card-content > img {
+  filter: invert(100%) grayscale(100%);
+}
+*/
+
 * {
   box-sizing: border-box;
 }
