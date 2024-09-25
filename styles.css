@@ -139,6 +139,7 @@ video {
 .welcome-text {
   margin: var(--web-margin);
   padding: 60px 0 40px 0;
+  width: 110ch;
 }
 
 .welcome-text > h2 {
