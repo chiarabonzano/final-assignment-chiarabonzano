@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Chiara Bonzano">
+  <meta name="description" content="Explore the Alessi interactive poster series, featuring three meticulously curated designs from the ADI Design Museum Compasso d'Oro in Milan. Celebrating the extraordinary shapes of Alessi's products, these posters highlight the brand's commitment to innovative design choices. Supervised by Prof. Davide Molinari for the Computer Design subject.">
+  <meta name="keywords" content="Alessi, interactive poster series, ADI Design Museum Compasso d'Oro, Milan, innovative design, shapes, computer design, Prof. Davide Molinari.">
+  <meta name="geo.placename" content="Milan, Italy">
+  <meta name="language" content="English">
+  <title>Alessi Interactive Poster Series | ADI Design Museum Compasso d'Oro | Milan</title>
+  <link rel="icon" href="/img/logo.svg">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="js/gsap.js"></script>
+  <script src="js/ScrollTrigger.js"></script>
+</head>
+<body>
+  <div class="main-wrapper">
+    <header class="header-wrapper">
+      <a class="logo" href="/#welcome"><img src="img/logo.svg" alt="My personal" width="40" height="40"></a>
+      <nav class="nav-container">
+        <ul class="nav-list">
+          <li class="nav-item works"><a href="/#works">Works</a></li>
+          <li class="nav-item about"><a href="/#contacts">Contacts</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="project-wrapper">
+      <main class="project-intro"> 
+        <div class="project-page-title">
+          <p>2023</p>
+          <h2>Alessi interactive poster series</h2>
+        </div>
+        <div class="intro-container">
+          <img src="img/alessi-project/alessi-poster-cover.jpg" alt="1 of the 3 interactive poster design series for Alessi's coffemakers, part of the ADI Design Museum Compasso d'Oro in Milan" width="1238" height="828" loading="lazy">
+          <div class="intro-content">
+            <p>This poster series represents three carefully selected designs from the ADI Design Museum Compasso d'Oro in Milan. Their purpose is to celebrate and emphasize the extraordinary shapes of Alessi's products, while showcasing the brand's commitment to innovative design choices. Test them <a href="https://indd.adobe.com/view/3b15661a-7f2d-44fd-966d-315e5869f81d" target="_blank">here</a>.</p>
+            <p>Project supervised by prof. Davide Molinari for the Computer Design subject.</p>
+          </div>
+        </div>
+      </main>
+      <div class="project-grid">
+        <div class="grid-element one">
+          <img src="img/alessi-project/alessi-poster-9090.jpg" alt="Alessi 9090 coffee maker poster design" width="603" height="854" loading="lazy">
+          <p>The 9090 is the first coffee maker by Alessi, based on a project by Richard Sapper in 1979 and, in the same year, won the Compasso d’Oro and became part of the Permanent Design Collection of the MoMA in New York.</p>
+        </div>
+        <div class="grid-element two">
+          <img src="img/alessi-project/alessi-poster-ossidiana.jpg" alt="Alessi Ossidiana coffee maker poster design" width="603" height="854" loading="lazy">
+          <p>The Ossidiana espresso coffeee maker designed by Mario Trimarchi for Alessi,  was awarded the Compasso d’Oro in 2016.</p>
+        </div>
+        <div class="grid-element three">
+          <img src="img/alessi-project/alessi-poster-napoletana.jpg" alt="Alessi Napoletana coffee maker poster design" width="602" height="853" loading="lazy">
+          <p>The 90018 Napoletana coffee maker designed by Italian Architect Riccardo Dalisi and awarded in 1981.</p>
+        </div>
+      </div>
+      <div class="project-media">
+        <video width="1920" height="1080" autoplay muted loop playsinline>
+          <source src="img/alessi-project/alessi-poster-video.mp4" type="video/mp4">
+        </video>
+        <video width="1920" height="1080" autoplay muted loop playsinline>
+          <source src="img/alessi-project/alessi-3-poster-video.mp4" type="video/mp4">
+        </video>
+        <video width="1920" height="1080" autoplay muted loop playsinline>
+          <source src="img/alessi-project/alessi-mockup-poster-video.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <footer class="footer-wrapper project-footer">
+      <div class="buttons-section">
+        <a href="/project-knifemarket.html" class="arrow-button previous"><span>Previous project</span></a>
+        <a href="/project-etro.html" class="arrow-button next"><span>Next project</span></a>
+      </div>
+      <div class="copyright project-footer">
+        <p>Copyright © 2023 Chiara Elena Bonzano. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+    <script>
+      gsap.from(".grid-element.one", {
+          duration: .5,
+          delay: .5,
+          opacity:0,
+          y: 20,
+          scrollTrigger: {
+            trigger: ".grid-element",
+            // markers: true,
+            start: "0% 60%",
+            end: "0% 60%",
+            toggleActions: "play none none none"
+          }
+        });
+      gsap.from(".grid-element.two", {
+          duration: .5,
+          delay: .5,
+          opacity:0,
+          y: 20,
+          scrollTrigger: {
+            trigger: ".grid-element",
+            // markers: true,
+            start: "30% 60%",
+            end: "30% 60%",
+            toggleActions: "play none none none"
+          }
+        });
+      gsap.from(".grid-element.three", {
+          duration: .5,
+          delay: .5,
+          opacity:0,
+          y: 20,
+          scrollTrigger: {
+            trigger: ".grid-element",
+            // markers: true,
+            start: "60% 60%",
+            end: "60% 60%",
+            toggleActions: "play none none none"
+          }
+        });
+    </script>
+</body>
+</html>

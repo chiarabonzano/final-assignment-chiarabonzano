@@ -1,0 +1,514 @@
+/* :root { 
+  background-color: #fefefe;
+  filter: invert(100%);
+}
+
+* { 
+  background-color: inherit;
+}
+
+img:not([src*=".svg"]), video {  
+  filter: invert(100%);
+} 
+
+.card-content > img {
+  filter: invert(100%) grayscale(100%);
+} */
+
+/* Spacing */
+/* @link https://utopia.fyi/space/calculator?c=320,20,1.25,1900,22,1.5,3,0,&s=0.75,1.5|2|3,xs-l&g=s,l,xl,12 */
+
+:root {
+  /* Space xs: 15px → 17px */
+  --space-xs: clamp(0.9375rem, 0.9122rem + 0.1266vw, 1.0625rem);
+  /* Space s: 20px → 22px */
+  --space-s: clamp(1.25rem, 1.2247rem + 0.1266vw, 1.375rem);
+  /* Space m: 30px → 33px */
+  --space-m: clamp(1.875rem, 1.837rem + 0.1899vw, 2.0625rem);
+  /* Space l: 40px → 44px */
+  --space-l: clamp(2.5rem, 2.4494rem + 0.2532vw, 2.75rem);
+  /* Space xl: 60px → 66px */
+  --space-xl: clamp(3.75rem, 3.6741rem + 0.3797vw, 4.125rem);
+
+  /* One-up pairs */
+  /* Space xs-s: 15px → 22px */
+  --space-xs-s: clamp(0.9375rem, 0.8489rem + 0.443vw, 1.375rem);
+  /* Space s-m: 20px → 33px */
+  --space-s-m: clamp(1.25rem, 1.0854rem + 0.8228vw, 2.0625rem);
+  /* Space m-l: 30px → 44px */
+  --space-m-l: clamp(1.875rem, 1.6978rem + 0.8861vw, 2.75rem);
+  /* Space l-xl: 40px → 66px */
+  --space-l-xl: clamp(2.5rem, 2.1709rem + 1.6456vw, 4.125rem);
+
+  /* Custom pairs */
+  /* Space xs-l: 15px → 44px */
+  --space-xs-l: clamp(0.9375rem, 0.5704rem + 1.8354vw, 2.75rem);
+}
+
+@font-face {
+  font-family: 'TWKLausanne-300';
+    src: url('fonts/TWKLausanne-300.eot'); /* IE9 Compat Modes */
+    src: url('fonts/TWKLausanne-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('fonts/TWKLausanne-300.woff2') format('woff2'), /* Super Modern Browsers */
+        url('fonts/TWKLausanne-300.woff') format('woff'), /* Pretty Modern Browsers */
+        url('fonts/TWKLausanne-300.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('fonts/TWKLausanne-300.svg') format('svg'); /* Legacy iOS */
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Typography */
+/* @link https://utopia.fyi/type/calculator?c=320,20,1.25,1900,22,1.5,3,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+:root {
+  /* Step 0: 20px → 22px */
+  --step-0: clamp(1.25rem, 1.2247rem + 0.1266vw, 1.375rem);
+  /* Step 1: 25px → 33px */
+  --step-1: clamp(1.5625rem, 1.4612rem + 0.5063vw, 2.0625rem);
+  /* Step 2: 31.25px → 49.5px */
+  --step-2: clamp(1.9531rem, 1.7221rem + 1.1551vw, 3.0938rem);
+  /* Step 3: 39.0625px → 74.25px */
+  --step-3: clamp(2.4414rem, 1.996rem + 2.2271vw, 4.6406rem);
+}
+
+:root {
+  --color: #111111;
+  --color-bg: #f3f3f3; 
+  --border: 1.5px solid var(--color);
+  --radius: 1.5rem;
+
+  --font-family: 'TWKLausanne-300', sans-serif;
+
+  --site-padding-inline: var(--space-xs-l);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+
+  font-size: var(--step-0);
+  font-family: var(--font-family);
+  font-weight: normal;
+  background-color: var(--color-bg);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.main-wrapper {
+  margin: auto;
+  max-width: 1900px;
+
+  background-color: var(--color-bg);
+}
+
+h1, h2, h3, p, a {
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--color);
+}
+
+h1 {
+  margin: 0;
+
+  font-size: var(--step-3);
+}
+
+h2 {
+  margin: 0;
+
+  font-size: var(--step-3);
+}
+
+h3 {
+  margin: .5rem 0;
+  font-size: var(--step-1);
+}
+
+p {
+  margin: 0;
+  padding-bottom: var(--space-xs-s);
+  font-size: var(--step-0);
+}
+
+a {
+  font-size: var(--step-0);
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+/*---------------- header ----------------*/
+.header-wrapper {
+  padding-inline: var(--site-padding-inline);
+  padding-block: var(--space-xs);
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  gap: var(--space-l);
+
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-item:last-child {
+  padding-right: 0;
+}
+
+.nav-item a {
+  font-size: var(--step-1);
+}
+
+.nav-item a:hover {
+  text-decoration: underline;
+}
+
+/*---------------- HOMEPAGE ----------------*/
+
+/*---------------- welcome ----------------*/
+.welcome-section {
+  padding-top: var(--space-l);
+}
+
+.welcome-text > h1 {
+  padding-inline: var(--site-padding-inline);
+  padding-top: var(--space-l);
+  max-width: 25ch;
+}
+
+.text-animation {
+  padding-block: var(--space-xs-l);
+}
+
+svg {
+  width: 100%;
+
+  overflow: visible;
+}
+
+.svg-path-hide {
+  visibility: hidden;
+}
+
+text {
+  font-size: calc(2*var(--step-2));
+  font-weight: 300;
+  fill: var(--color);
+}
+
+/*---------------- works ----------------*/
+.works-section {
+  padding-inline: var(--site-padding-inline);
+}
+
+.work-text {
+  width: 100%;
+  display: flex;
+}
+
+.work-text > p {
+  background-image: url(img/icons/arrow-down.svg);
+  background-repeat: no-repeat;
+  background-position: bottom 24px right;
+  background-size: 12px auto;
+  padding-right: var(--space-s);
+}
+
+.cards-container {
+  padding-top: var(--space-m);
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  gap: var(--space-l-xl) var(--space-s-m);
+}
+
+
+@media not all and (hover: none) {
+  .card-content > img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
+
+  .card-content > img:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+  }
+}
+
+.categories-box {
+  display: flex;
+}
+
+.categories-box > p {
+  width: fit-content;
+  text-transform: none;
+}
+
+.categories-box > p > span {
+  border-bottom: var(--border);
+}
+
+/*---------------- contacts ----------------*/
+.contacts-section {
+  padding-inline: var(--site-padding-inline);
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space-s-m);
+}
+
+.about-p {
+  color: var(--color-bg);
+}
+
+.contacts-link {
+  font-size: var(--step-3);
+}
+
+.contacts-link:hover {
+  text-decoration: underline;
+  transition: 350ms linear;
+}
+
+/*---------------- footer ----------------*/
+.footer-wrapper {
+  padding: var(--site-padding-inline);
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.copyright > p {
+  text-align: center;
+  font-size: 14px;
+  color: #C1A5CF;
+}
+
+/*---------------- PROJECT PAGE ----------------*/
+/*---------------- intro ----------------*/
+.project-wrapper {
+  padding: var(--site-padding-inline);
+}
+
+.project-page-title > p {
+  text-align: right;
+}
+
+.project-page-title > h2 {
+  padding-bottom: var(--space-l);
+}
+
+.intro-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-s-m);
+}
+
+.intro-content > p > a {
+  text-transform: none;
+  border-bottom: var(--border);
+}
+
+/*---------------- project grid ----------------*/
+.project-grid {
+  padding-top: var(--space-xl);
+  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: var(--space-s-m);
+  grid-template-rows: 1fr 1fr 1fr 1fr 0.5fr;
+  grid-template-areas: "one . ." ". . two" ". three .";
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.grid-element {
+  padding-top: var(--space-xl);
+}
+
+.grid-element:first-child {
+  padding-top: 0;
+
+  grid-area: one;
+  grid-row: 1/3;
+}
+
+.grid-element:nth-child(2) {
+  grid-area: two;
+  grid-row: 2/4;
+}
+
+.grid-element:last-child {
+  grid-area: three;
+  grid-row: 3/5;
+}
+
+/*---------------- project video ----------------*/
+.project-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.desktop-record {
+  margin-top: var(--space-l);
+  border: var(--border);
+  border-radius: 1rem;
+}
+
+.mobile-record {
+  margin-top: var(--space-l);
+  max-width: 22rem;
+  border: var(--border);
+  border-radius: 1rem;
+}
+
+/*---------------- project-footer ----------------*/
+.buttons-section {
+  width: 100%;
+  padding-block: var(--space-m) var(--space-xl);
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrow-button {
+  padding: 6px 0;
+  background-repeat: no-repeat;
+  background-size: 2rem auto;
+}
+
+.next {
+  height: 40px;
+  padding-right: var(--space-l);
+
+  background-image: url(img/icons/arrow-right.svg);
+  background-position: bottom 7px right;
+}
+
+.previous {
+  height: 40px;
+  padding-left: var(--space-l);
+
+  background-image: url(img/icons/arrow-left.svg);
+  background-position: bottom 7.5px left;
+}
+
+.copyright.project-footer > p {
+  color: var(--black);
+}
+
+/*---------------- MEDIA QUERY ----------------*/
+/*---------------- tablet viewport ----------------*/
+@media (max-width: 1024px) {
+  .project-intro {
+    height: auto;
+  }
+
+  .intro-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project-gallery {
+    row-gap: 0;
+
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/*---------------- mobile viewport ----------------*/
+@media (max-width: 768px) {
+  .nav-container {
+    display: none;
+  }
+
+  text {
+    font-size: 5em;
+  }
+
+  .work-text > p {
+    background-position: bottom 19px right
+  }
+
+  .cards-container {
+    grid-template-columns: none;
+  }
+
+  .card-box {
+    border-bottom: var(--border);
+  }
+
+  .categories-box {
+    display: none;
+  }
+
+  .content-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contacts-text {
+    padding-top: var(--space-m);
+  }
+
+  .intro-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-grid {
+    margin: 0 20px;
+    padding-bottom: 80px;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  video {
+    padding-block: var(--space-l);
+  }
+
+  .mobile-record {
+    padding-block: 0;
+    max-width: 16rem;
+  }
+
+  .desktop-record {
+    display: none;
+  }
+
+  .arrow-button span {
+    display: none;
+  }
+}
